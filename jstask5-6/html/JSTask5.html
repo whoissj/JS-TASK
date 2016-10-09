@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>报名页</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="task5.js"></script>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+        .box {
+            margin: auto;
+            padding:0 20px;
+            width: 960px;
+            height: 600px;
+            border: 1px solid gray;
+            font-size: 16px;
+            font-family: 'Arial Normal', 'Arial';
+        }
+        .name,.job,.school,.level,.gift,.oath,.qq,.join-time,.footer {
+            position: relative;
+            margin-bottom: 15px;
+            height: 25px;
+        }
+        input[type=text] {
+            position: absolute;
+            left: 120px;
+            width: 820px;
+            height: 25px;
+        }
+        form {
+            position: absolute;
+            left: 120px;
+            width: 820px;
+            line-height: 25px;
+        }
+        form label:last-child {
+            margin-right: 0;
+        }
+        .kind{
+            margin-right: 50px;
+        }
+        .study{
+            margin-right: 40px;
+        }
+        span {
+            position: absolute;
+            line-height: 25px;
+        }
+        .name {
+            margin-top: 40px;
+        }
+        .oath textarea{
+            position: absolute;
+            left: 120px;
+            width: 820px;
+            height: 100px;
+        }
+        input[type=button] {
+            margin-right: 90px;
+            margin-left: 90px;
+            width: 100px;
+            height:40px;
+            border-radius: 5px;
+            border:1px solid gray;
+            font-size: 16px;
+            font-family: 'Arial Normal', 'Arial';
+            background: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .footer{
+            margin-top: 180px;
+            text-align: center;
+        }
+        #container{
+            width: 820px;
+            height: 120px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="name">
+        <span>姓名：</span>
+        <input id="name" type="text">
+    </div>
+    <div class="qq">
+        <span>QQ：</span>
+        <input id="qq" type="text">
+    </div>
+    <div class="job">
+        <span>修真类型：</span>
+        <form>
+        <input type="radio" id="kind-css" name="job" value="1"><label class="kind" for="kind-css">CSS</label>
+        <input type="radio" id="kind-js" name="job" value="2"><label class="kind" for="kind-js">JS</label>
+        <input type="radio" id="kind-java" name="job" value="3"><label class="kind" for="kind-java">JAVA</label>
+        <input type="radio" id="kind-op" name="job" value="4"><label class="kind" for="kind-op">运维</label>
+        <input type="radio" id="kind-dba" name="job" value="5"><label class="kind" for="kind-dba">DBA</label>
+        <input type="radio" id="kind-pro" name="job" value="6"><label class="kind" for="kind-pro">产品</label>
+        <input type="radio" id="kind-ios" name="job" value="7"><label class="kind" for="kind-ios">IOS</label>
+        <input type="radio" id="kind-andr" name="job" value="8"><label class="kind" for="kind-andr">ANDROID</label>
+        </form>
+    </div>
+    <div class="school">
+        <span>毕业院校：</span>
+        <input id="school" type="text">
+    </div>
+    <div class="gift">
+        <span>资质：</span>
+        <form>
+            <input type="radio" id="gift-good" name="gift" value="1"><label class="kind" for="gift-good">学霸</label>
+            <input type="radio" id="gift-bad" name="gift" value="2"><label class="kind" for="gift-bad">学渣</label>
+        </form>
+    </div>
+    <div class="level">
+        <span>修行等级：</span>
+        <form>
+            <input type="radio" id="level0" name="level" value="1"><label class="study" for="level0">0基础</label>
+            <input type="radio" id="level1" name="level" value="2"><label class="study" for="level1">修行3个月以内</label>
+            <input type="radio" id="level2" name="level" value="3"><label class="study" for="level2">修行6个月以内</label>
+            <input type="radio" id="level3" name="level" value="4"><label class="study" for="level3">修行1年以内</label>
+            <input type="radio" id="level4" name="level" value="5"><label class="study" for="level4">修行3年以内</label>
+            <input type="radio" id="level5" name="level" value="6"><label class="study" for="level5">修行3年以上</label>
+        </form>
+    </div>
+    <div class="join-time">
+        <span>预计入学时间：</span>
+        <input id="jointime" type="text">
+    </div>
+    <div class="oath">
+        <span>修行立愿：</span>
+        <textarea id="wish"></textarea>
+        <script id="container" name="content" type="text/plain"></script>
+        <!-- 配置文件 -->
+        <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+        <!-- 编辑器源码文件 -->
+        <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+        <!-- 实例化编辑器 -->
+        <script type="text/javascript">
+            var ue = UE.getEditor('container',{
+                toolbars: [
+                    [
+                        '|', 'undo', 'redo', '|',
+                        'bold', 'italic', 'underline', 'fontborder', 'removeformat', 'formatmatch', '|', 'forecolor', 'backcolor','|',
+                         'fontfamily', 'fontsize', '|',
+                        'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                        'link', 'unlink', '|',
+                        'simpleupload', 'insertimage', 'emotion',  '|'
+                    ]
+                ],
+                autoHeightEnabled: false,
+                autoFloatEnabled: false,
+                elementPathEnabled:false
+            });
+        </script>
+    </div>
+    <div class="footer">
+        <input type="button" class="save" id="save" value="保存">
+        <input type="button" class="cancel" id="cancel" value="取消">
+    </div>
+
+</div>
+
+</body>
+</html>

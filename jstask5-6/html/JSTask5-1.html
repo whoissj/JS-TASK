@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="task5-1.js"></script>
+    <title>列表页</title>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+        .box {
+            position: relative;
+            margin: auto;
+            padding:0 20px;
+            width: 960px;
+            height: 600px;
+            border: 1px solid gray;
+            font-size: 16px;
+            font-family: 'Arial Normal', 'Arial';
+        }
+        .title{
+            margin: 0;
+            line-height: 68px;
+        }
+        .addinfo{
+            position: absolute;
+            top:0;
+            right: 40px;
+        }
+        .addinfo a{
+            font-size: 48px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+            font-size: 0;
+        }
+        li{
+            display: inline-block;
+            width: 300px;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 40px;
+        }
+        ul li:first-child:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        .top{
+            font-size: 0;
+        }
+        .top p{
+            display: inline-block;
+            width: 300px;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 40px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <p class="title">已报名弟子：</p>
+    <div class="addinfo">
+        <a id="add">+</a>
+    </div>
+    <div class="top">
+        <p>姓名</p>
+        <p>修真类型</p>
+        <p>报名时间</p>
+    </div>
+</div>
+</body>
+</html>
