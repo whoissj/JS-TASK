@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>身份发放</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-family: "Microsoft YaHei";
+        }
+        .wrap{
+            margin:0 auto;
+            width:100%;
+            max-width: 640px;
+        }
+        .container{
+            margin:0 auto;
+            width:100%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+        .header-out{
+            width:100%;
+            background-color:#29bde0;
+        }
+        .header-inner{
+            position: relative;
+            height:61px;
+            line-height: 61px;
+            text-align: center;
+        }
+        .return{
+            position: absolute;
+            top:10px;
+            left: 0;
+        }
+        .title{
+            font-size: 34px;
+            color: white;
+            vertical-align: middle;
+        }
+        .help{
+            position: absolute;
+            top:10px;
+            right: 0;
+            width: 37px;
+            height: 37px;
+            border:4px solid white;
+            border-radius: 100%;
+            background: url("js-task1-02.png") no-repeat center center;
+        }
+        .main{
+            width:100%;
+            background-color: #eceded;
+        }
+        .player-set{
+            width:100%;
+            height: 454px;
+        }
+        .left-title{
+            float: left;
+            width: 121px;
+            height: 454px;
+            background-color: #fff;
+            border-right: 1px solid #f2f2f2;
+            text-align: center;
+        }
+        .left-title p{
+            margin-top: 150px;
+            font-size: 34px;
+        }
+        .players{
+            float: right;
+            width: 476px;
+            height: 454px;
+            background-color: #fbfbfb;
+            border-left: 2px solid #fff;
+        }
+        .players-id{
+            width:100%;
+            height: 391px;
+            border-bottom: 1px solid #f2f2f2;
+            font-size: 26px;
+            color:#c1c1c1;
+            overflow: scroll;
+        }
+        .set{
+            width:100%;
+            height: 62px;
+            line-height: 62px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .clickset{
+            display: inline-block;
+            padding-right: 30px;
+            font-size: 18px;
+            color: #79d2e9;
+            background: url("js-task1-03.png") no-repeat right center;
+            vertical-align: top;
+        }
+        .explain{
+            margin-top: 9px;
+            width:100%;
+            height: 200px;
+            background-color: #fff;
+        }
+        input{
+            border: none;
+            font-size: 28px;
+            font-family: "Microsoft YaHei";
+        }
+        .human{
+            width: 550px;
+            height: 67px;
+            margin:10px 25px 0 25px;
+            border-bottom: 2px solid #f2f2f2;
+        }
+        .ghost{
+            width: 550px;
+            height: 67px;
+            margin:20px 25px 0 25px;
+            border-bottom: 2px solid #f2f2f2;
+        }
+        .players-num{
+            position: relative;
+            margin-top: 9px;
+            width:100%;
+            height: 190px;
+            background-color: #fff;
+        }
+        .deal{
+            margin: 20px 0;
+            width:100%;
+            height: 88px;
+            background-color: #fab344;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .num{
+            width:100%;
+            height: 75px;
+            padding-left: 20px;
+            line-height: 75px;
+            font-size: 28px;
+        }
+        .num input{
+            margin-left: 27px;
+            margin-right: 20px;
+            width: 60px;
+            height: 42px;
+            background-color: #f4f5f5;
+            text-align: center;
+            color: #fab344;
+            vertical-align: middle;
+        }
+        .minus{
+            float:left;
+            margin-top: 42px;
+            margin-left: 40px;
+            width: 26px;
+            height: 26px;
+            border:1px solid #f2f2f2;
+            text-align: center;
+            cursor: pointer;
+        }
+        .minus i{
+            display: inline-block;
+            width: 17px;
+            height: 4px;
+            background-color: #fab344 ;
+            vertical-align: middle;
+        }
+        .plus{
+            position: relative;
+            float:right;
+            margin-top: 42px;
+            margin-right: 40px;
+            width: 26px;
+            height: 26px;
+            border:1px solid #f2f2f2;
+            text-align: center;
+            cursor: pointer;
+        }
+        .i1{
+            display: inline-block;
+            width: 17px;
+            height: 4px;
+            background-color: #fab344 ;
+            vertical-align: middle;
+        }
+        .i2{
+            position: absolute;
+            top: 5px;
+            left: 11px;
+            display: inline-block;
+            width: 4px;
+            height: 17px;
+            background-color: #fab344 ;
+        }
+        .slider{
+            float: left;
+            margin-top: 55px;
+            margin-left: 20px;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 408px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        /*轨道样式*/
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 4px;
+            background-color: #fab344;
+        }
+        /*去焦点外框*/
+        input[type=range]:focus {
+            outline: none;
+        }
+        /*滑块样式*/
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 60px;
+            height: 36px;
+            margin-top: -16px; /*使滑块超出轨道部分的偏移量相等*/
+            background: url(js-task2-04.png) no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="JSTask2home.html"><img class="return" src="js-task1-01.png"/></a>
+                <p class="title">参数设置</p>
+                <a href="#"><div class="help"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="player-set">
+                <div class="left-title">
+                    <p>玩<br>家<br>配<br>比</p>
+                </div>
+                <div class="players">
+                    <div class="players-id" id="players-id">
+
+                    </div>
+                    <div class="set">
+                        <p class="clickset" onclick="set()">点击设置</p>
+                    </div>
+                </div>
+            </div>
+            <div class="explain">
+                <input class="human" type="text" placeholder="水民词组"/>
+                <input class="ghost" type="text" placeholder="幽灵词组"/>
+            </div>
+            <div class="players-num">
+                <div class="num">
+                    <span>玩家人数</span>
+                    <input type="text" placeholder="" value="" id="nums" oninput="typeIn()" onblur="typeOut()" />
+                    <span>人</span>
+                </div>
+                <div class="minus" onclick="minus()">
+                    <i></i>
+                </div>
+                <label for="range"></label>
+                <input class="slider" id="range" type="range" min="6" max="20" value="6" oninput = "change()"/>
+                <div class="plus" onclick="plus()">
+                    <i class="i1"></i>
+                    <i class="i2"></i>
+                </div>
+            </div>
+
+            <input class="deal" type="button" value="去发牌" onclick="goDeal()"/>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="task2.js" charset="utf-8"></script>
+</body>
+</html>

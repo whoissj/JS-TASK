@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>冷启动</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin:0;
+        }
+        .box{
+            margin:0 auto;
+            width: 640px;
+            height: 1000px;
+            background-color: #29bde0;
+            text-align: center;
+        }
+        .box img{
+            margin-top: 100px;
+        }
+        .box p{
+            margin-top: 60px;
+            font-size: 40px;
+            font-family: "黑体";
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="js-task2coldstart.png"/>
+    <p>更多·更全·更好用</p>
+</div>
+<script>
+    function toHome(){
+        location.href = "JSTask2home.html";
+    }
+    setTimeout("toHome()",5000);
+</script>
+</body>
+</html>

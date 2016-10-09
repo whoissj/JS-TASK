@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>黑夜解密</title>
+    <link type="text/css" href="JSTask4Com.css" rel="stylesheet"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-family: "Microsoft YaHei";
+        }
+        .main{
+            margin-top: 61px;
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+        .main p{
+            margin-left: auto;
+            margin-right: auto;
+            width: 450px;
+            font-size: 27px;
+            color: #fff;
+        }
+        .circle{
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 70px;
+            width: 240px;
+            height: 240px;
+            border:8px solid #fff;
+            border-radius: 100%;
+            background-color: #fbb435;
+            text-align: center;
+        }
+        .circle img{
+            margin-top: 40px;
+        }
+        .footer-vote{
+            padding-bottom: 60px;
+            bottom: 0;
+            left: auto;
+            right: auto;
+            border-top:1px solid #42c5e4;
+            width: 640px;
+            text-align: center;
+            background-color: #29bde0;
+        }
+        .footer-vote input{
+            width: 492px;
+            height: 87px;
+            background-color: #fbb435;
+            font-size: 40px;
+            font-family: "Microsoft YaHei";
+            color: #fff;
+        }
+        .discus{
+            width:100%;
+            height: 295px;
+        }
+        .discus p{
+            margin-left: auto;
+            margin-right: auto;
+            width: 422px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #24a7c6;
+            font-size: 34px;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .ghost{
+            margin-top: 38px;
+        }
+        .players{
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#"><img class="return" src="js-task4-2-01.png"/></a>
+                <p class="title">黑夜解密</p>
+                <a href="JSTask2home.html"><img class="close" src="js-task3-01.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main" id="main">
+        <div class="circle">
+            <img id="pic" src="js-task4-3-02.png"/>
+        </div>
+
+    </div>
+    <div class="footer-vote">
+        <div class="discus" id="discus">
+            <p class="ghost">亡灵发表遗言</p>
+            <img src="js-task4-3-01.png"/>
+            <p class="players">玩家依次发言讨论</p>
+            <img src="js-task4-3-01.png"/>
+        </div>
+        <input type="button" id="start" value="去投票" onclick="govote()"/>
+    </div>
+</div>
+<script src="task4-3.js" charset="utf-8"></script>
+</body>
+</html>

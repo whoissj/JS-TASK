@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: "Microsoft YaHei";
+        }
+        .wrap{
+            margin:0 auto;
+            width: 640px;
+        }
+
+        .header{
+            position: fixed;
+            top:0;
+            width:640px;
+            background-color:#29bde0;
+            z-index: 9999;
+            height:61px;
+            line-height: 61px;
+            text-align: center;
+        }
+        .return{
+            position: absolute;
+            top:10px;
+            left: 20px;
+        }
+        .main{
+            width: 100%;
+            margin-top: 61px;
+            padding:30px 0 65px 0;
+            background-color: #efefef;
+        }
+        .lastgame{
+            display: block;
+            margin: 0 auto;
+            width: 570px;
+            height: 116px;
+            text-align: center;
+            line-height: 116px;
+            font-size: 34px;
+            color: #a3a3a3;
+            border: 1px solid lightgray;
+            background: #fff url("jstask2home-01.png") no-repeat 530px center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .type{
+            margin: 27px auto;
+            width: 570px;
+            border: 1px solid lightgray;
+            background-color: #fff;
+        }
+        .title{
+            margin-bottom: 32px;
+            width: 570px;
+            height: 90px;
+            font-size: 37px;
+            color: #fbba47;
+            border-bottom: 2px solid #fbba47;
+            text-align: center;
+            line-height: 90px;
+        }
+        .level{
+            display: block;
+            margin: 0 auto;
+            width: 465px;
+            height: 135px;
+            background-color: #29bde0;
+            text-align: center;
+            line-height: 135px;
+            font-size: 32px;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .players{
+            text-align: center;
+            line-height: 78px;
+            font-size: 24px;
+            color: #a3a3a3;
+        }
+        ul{
+            margin-bottom: 10px;
+            list-style: none;
+            font-size: 0;
+            text-align: center;
+        }
+        li{
+            margin-right: 10px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color:  #f0f0f0;
+        }
+        li:hover{
+            cursor: pointer;
+            background-color: #29bde0;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+            <a href="#"><img class="return" src="js-task4-2-01.png"/></a>
+        </div>
+    <div class="main">
+        <a class="lastgame" href="JSTask4-5.html">上次游戏：捉鬼猜词版</a>
+        <div class="type">
+            <p class="title">捉鬼游戏</p>
+            <a class="level" href="JSTask2.html">简化版</a>
+            <p class="players">有1133个用户正在玩此款游戏</p>
+            <a class="level">猜词版</a>
+            <p class="players">有1133个用户正在玩此款游戏</p>
+            <a class="level">白痴版</a>
+            <p class="players">有1133个用户正在玩此款游戏</p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

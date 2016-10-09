@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>法官台本</title>
+    <link type="text/css" href="JSTask4Com.css" rel="stylesheet"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-family: "Microsoft YaHei";
+        }
+        ul{
+            list-style: none;
+            font-size: 0;
+        }
+        li{
+            position: relative;
+            margin-top: 65px;
+            margin-left: 40px;
+            margin-right: 35px;
+            list-style: none;
+            width: 126px;
+            height: 126px;
+            display: inline-block;
+            border: 5px solid #fff;
+        }
+        li img{
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        li p:nth-of-type(1){
+            width: 126px;
+            height: 99px;
+            line-height:99px;
+            font-size: 30px;
+            background-color: #f5c97b;
+            text-align: center;
+        }
+        li p:nth-of-type(2){
+            width: 126px;
+            height: 27px;
+            line-height: 27px;
+            font-size: 22px;
+            background-color: #83b09a;
+            color: #fff;
+            text-align: center;
+        }
+        .main{
+            width:100%;
+            padding-top: 65px;
+            padding-bottom: 210px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="JSTask2.html"><img class="return" src="js-task1-01.png"/></a>
+                <p class="title">法官台本</p>
+                <a href="JSTask2home.html"><img class="close" src="js-task3-01.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main" id="main"></div>
+    <div class="footer">
+        <input type="button" id="start" value="开始游戏" onclick="gamestart()"/>
+    </div>
+</div>
+
+<script src="task4.js">
+
+</script>
+</body>
+</html>

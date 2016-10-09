@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>杀手杀人</title>
+    <link type="text/css" href="JSTask4Com.css" rel="stylesheet"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-family: "Microsoft YaHei";
+        }
+        .main-top{
+            position: fixed;
+            margin-top: 61px;
+            width: 640px;
+            background-color: #29bde0;
+            z-index: 9999;
+        }
+        .info{
+            height: 82px;
+            background-color: #b9e9f5;
+        }
+        .explain{
+            float: left;
+            margin:5px 0 0 50px;
+            font-size: 26px;
+            width: 515px;
+        }
+        .audio{
+            float: right;
+            margin-top: 15px;
+            margin-right: 20px;
+            display: inline-block;
+            width: 52px;
+            height: 52px;
+            background: #fbb435 url("js-task4-2-02.png") no-repeat 16px center;
+            border-radius: 100%;
+        }
+        .tans{
+            margin:0 0 0 70px;
+            width: 0;
+            height:0;
+            border-top:13px solid #b9e9f5;
+            border-left:13px solid transparent;
+            border-right:13px solid transparent;
+        }
+        .tips{
+            margin-left: 50px;
+            font-size: 24px;
+            color: #fff;
+            line-height: 90px;
+            border-bottom:1px solid #42c5e4;
+        }
+        .main{
+            width:100%;
+            margin-top: 185px;
+            padding-top: 15px;
+            padding-bottom: 210px;
+        }
+        ul{
+            list-style: none;
+            font-size: 0;
+        }
+        li{
+            position: relative;
+            margin-top: 65px;
+            margin-left: 40px;
+            margin-right: 35px;
+            list-style: none;
+            width: 126px;
+            height: 126px;
+            display: inline-block;
+            border: 5px solid #fff;
+        }
+        li img{
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+        li p:nth-of-type(1){
+            width: 126px;
+            height: 99px;
+            line-height:99px;
+            font-size: 30px;
+            background-color: #f5c97b;
+            text-align: center;
+        }
+        li p:nth-of-type(2){
+            width: 126px;
+            height: 27px;
+            line-height: 27px;
+            font-size: 22px;
+            background-color: #83b09a;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#"><img class="return" src="js-task4-2-01.png"/></a>
+                <p class="title">杀手杀人</p>
+                <a href="JSTask2home.html"><img class="close" src="js-task3-01.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main-top">
+        <div class="info">
+            <p class="explain">杀手请睁眼,（杀手告诉法官是否开枪）杀手请选择要杀的对象</p>
+            <div class="audio"></div>
+        </div>
+        <div class="tans">
+        </div>
+        <p class="tips">点击下方玩家头像，对被狙击的玩家进行标记</p>
+    </div>
+    <div class="main" id="main">
+
+    </div>
+    <div class="footer">
+        <input type="button" id="start" value="确定" onclick="decide()"/>
+    </div>
+</div>
+
+
+
+<script src="task4-2.js" charset="utf-8"></script>
+</body>
+</html>

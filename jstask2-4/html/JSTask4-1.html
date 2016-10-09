@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>流程</title>
+    <link type="text/css" href="JSTask4Com.css" rel="stylesheet"/>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-family: "Microsoft YaHei";
+        }
+        .main{
+            background-color: #f0f0f0;
+            padding-top: 36px;
+            padding-bottom: 36px;
+        }
+        .day1{
+            position: relative;
+            margin-top: 61px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 620px;
+            height: 86px;
+            line-height: 86px;
+            background-color: #fff;
+            border:1px solid #e5e5e5;
+        }
+        .day1 p{
+            font-size: 30px;
+            color: #29bde0;
+            text-align: center;
+        }
+        .day1 img{
+            position: absolute;
+            top: 37px;
+            right: 17px;
+            cursor: pointer;
+        }
+        .step{
+            position: relative;
+            margin-top: -1px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 620px;
+            background-color: #fff;
+            border:1px solid #e5e5e5;
+        }
+        .step p{
+            margin-top:20px;
+            margin-left: 94px;
+            margin-bottom: 20px;
+            width: 477px;
+            height: 77px;
+            line-height: 77px;
+            background-color: #24a7c6;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .step p:hover{
+            opacity: 0.8;
+        }
+        .step p:nth-of-type(4){
+            margin-bottom: 85px;
+        }
+        .tran{
+            width:0;
+            height:0;
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            border-right: 16px solid  #24a7c6;
+        }
+        #tran1{
+            position: absolute;
+            top: 73px;
+            left: 78px;
+        }
+        #tran2{
+            position: absolute;
+            top: 170px;
+            left: 78px;
+        }
+        #tran3{
+            position: absolute;
+            top: 267px;
+            left: 78px;
+        }#tran4{
+             position: absolute;
+             top: 363px;
+             left: 78px;
+         }
+        #tran5{
+            position: absolute;
+            top: 525px;
+            left: 78px;
+        }
+        #tran6{
+            position: absolute;
+            top: 622px;
+            left: 78px;
+        }
+        #tran7{
+            position: absolute;
+            top: 719px;
+            left: 78px;
+        }
+        .line{
+            position: absolute;
+            top:0;
+            left: 35px;
+            width:2px;
+            height: 826px;
+            background-color: #e5e5e5;
+        }
+        .daytime,.night{
+            position: absolute;
+            left: 5px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #e5e5e5;
+            border-radius: 100%;
+        }
+        .daytime{
+            top: 55px;
+            background: #fff url("js-task4-1-02.png") no-repeat center center;
+        }
+        .night{
+            top: 510px;
+            background: #fff url("js-task4-1-03.png") no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="JSTask2.html"><img class="return" src="js-task1-01.png"/></a>
+                <p class="title">法官台本</p>
+                <a href="JSTask2home.html"><img class="close" src="js-task3-01.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="day1">
+            <p id="whichday">第一天</p>
+            <img src="js-task4-1-01.png" onclick="col()"/>
+        </div>
+        <div class="step" id="step1">
+            <p id="killer" onclick="gotokill()">杀手杀人</p>
+            <p>警察验人</p>
+            <p>狙击狙人</p>
+            <p>医生救人</p>
+            <p>亡灵发表遗言</p>
+            <p>玩家依次发言</p>
+            <p>投票</p>
+            <div class="tran" id="tran1">
+            </div>
+            <div class="tran" id="tran2">
+            </div>
+            <div class="tran" id="tran3">
+            </div>
+            <div class="tran" id="tran4">
+            </div>
+            <div class="tran" id="tran5">
+            </div>
+            <div class="tran" id="tran6">
+            </div>
+            <div class="tran" id="tran7">
+            </div>
+            <div class="line">
+            </div>
+            <div class="daytime"></div>
+            <div class="night"></div>
+        </div>
+    </div>
+</div>
+<script src="task4-1.js">
+
+</script>
+</body>
+</html>
