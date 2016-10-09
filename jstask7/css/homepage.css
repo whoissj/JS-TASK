@@ -1,0 +1,83 @@
+.hp-header{
+    position: fixed;
+    top:0;
+    width:640px;
+    background-color:#29bde0;
+    z-index: 9999;
+    height:61px;
+}
+.hp-return{
+    position: absolute;
+    top:15px;
+    left: 20px;
+}
+.hp-main{
+    width: 100%;
+    margin-top: 61px;
+    padding:30px 0 65px 0;
+    background-color: #efefef;
+}
+.hp-lastgame{
+    display: block;
+    margin: 0 auto;
+    width: 570px;
+    height: 116px;
+    text-align: center;
+    line-height: 116px;
+    font-size: 34px;
+    color: #a3a3a3;
+    border: 1px solid lightgray;
+    background: #fff url("../images/homepage-02.png") no-repeat 530px center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hp-type{
+    margin: 27px auto;
+    width: 570px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+}
+.hp-title{
+    margin-bottom: 32px;
+    width: 570px;
+    height: 90px;
+    font-size: 37px;
+    color: #fbba47;
+    border-bottom: 2px solid #fbba47;
+    text-align: center;
+    line-height: 90px;
+}
+.hp-level{
+    display: block;
+    margin: 0 auto;
+    width: 465px;
+    height: 135px;
+    background-color: #29bde0;
+    text-align: center;
+    line-height: 135px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hp-players{
+    text-align: center;
+    line-height: 78px;
+    font-size: 24px;
+    color: #a3a3a3;
+}
+.hp-type ul{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.hp-type li{
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color:  #f0f0f0;
+}
+.hp-typeli:hover{
+    cursor: pointer;
+    background-color: #29bde0;
+}

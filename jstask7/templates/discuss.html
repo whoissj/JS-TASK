@@ -1,0 +1,27 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#"><img class="return" src="../images/kill-01.png"/></a>
+                <p class="title">黑夜解密</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="discuss-main" id="discuss-main">
+        <div class="circle">
+            <img id="pic" ng-src="{{cryFace}}"/>
+        </div>
+        <p ng-repeat="killdeadperson in killdeadPersons track by $index">{{killdeadperson.num}}号玩家被杀手杀死，真实身份是{{killdeadperson.job}}</p>
+        <p ng-repeat="votedeadperson in votedeadPersons track by $index">{{votedeadperson.num}}号玩家被投票投死，真实身份是{{votedeadperson.job}}</p>
+    </div>
+    <div class="footer-vote">
+        <div class="discus" id="discus" ng-if="show">
+            <p class="discuss-ghost">亡灵发表遗言</p>
+            <img src="../images/discuss-02.png"/>
+            <p class="discuss-players">玩家依次发言讨论</p>
+            <img src="../images/discuss-02.png"/>
+        </div>
+        <input type="button" id="start" value="{{voteOrnext}}" ng-click="govote()"/>
+    </div>
+</div>

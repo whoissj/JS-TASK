@@ -1,0 +1,66 @@
+.discuss-main{
+    margin-top: 61px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+.discuss-main p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    font-size: 27px;
+    color: #fff;
+}
+.circle{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    width: 240px;
+    height: 240px;
+    border:8px solid #fff;
+    border-radius: 100%;
+    background-color: #fbb435;
+    text-align: center;
+}
+.circle img{
+    margin-top: 40px;
+}
+.footer-vote{
+    padding-bottom: 60px;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    border-top:1px solid #42c5e4;
+    width: 640px;
+    text-align: center;
+    background-color: #29bde0;
+}
+.footer-vote input{
+    width: 492px;
+    height: 87px;
+    background-color: #fbb435;
+    font-size: 40px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+}
+.discus{
+    width:100%;
+    height: 295px;
+}
+.discus p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 422px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #24a7c6;
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+.discuss-ghost{
+    margin-top: 38px;
+}
+.discuss-players{
+    margin-top: 12px;
+}

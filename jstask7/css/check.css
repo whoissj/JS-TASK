@@ -1,0 +1,105 @@
+.wrap{
+    margin:0 auto;
+    width:100%;
+    max-width: 640px;
+    background-color: #29bde0;
+}
+.container{
+    margin:0 auto;
+    width:100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+.check-header-out{
+    width:640px;
+    background-color:#29bde0;
+    border-bottom:1px solid #42c5e4;
+}
+.header-inner{
+    position: relative;
+    height:61px;
+    line-height: 61px;
+    text-align: center;
+}
+.return{
+    position: absolute;
+    top:10px;
+    left: 0;
+}
+.title{
+    font-size: 34px;
+    color: white;
+    vertical-align: middle;
+}
+.close{
+    position: absolute;
+    top:10px;
+    right: 0;
+}
+.check-main{
+    position: relative;
+    width:100%;
+    padding-bottom: 60px;
+}
+.check-content{
+    margin-top: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 452px;
+    height: 653px;
+    border: 6px solid #fff;
+    background-color: #ffedc5;
+    text-align: center;
+}
+.check-number{
+    margin-top: -35px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    border-radius: 100%;
+    background-color: #fff;
+    border:4px solid #ffedc5;
+    text-align: center;
+    font-size: 40px;
+    color:#f56b81;
+}
+.bigMargin {
+    margin-top: 142px;
+}
+.smallMargin {
+    margin-top: 22px;
+}
+.check-id{
+    margin-top: 40px;
+    font-size: 40px;
+    color:#2cbde0;
+}
+.check-keyword{
+    margin-top: 20px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    color: #f56b81;
+    border-bottom: 2px solid #fff;
+}
+.check-tips{
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    color: #fca207;
+    width: 400px;
+    text-align: left;
+}
+.check-check{
+    margin:123px auto 0 auto;
+    width: 490px;
+    height: 85px;
+    line-height: 85px;
+    background-color: #fbb435;
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+}

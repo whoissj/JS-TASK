@@ -1,0 +1,44 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a ui-sref="discuss"><img class="return" src="../images/check-01.png"/></a>
+                <p class="title">法官台本</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="day1">
+            <p id="whichday">{{dayNum}}</p>
+            <img src="../images/option-01.png" ng-click="col()"/>
+        </div>
+        <div class="step" id="step1" ng-show="step">
+            <p id="killer" ng-click="gotokill()">杀手杀人</p>
+            <p>警察验人</p>
+            <p>狙击狙人</p>
+            <p>医生救人</p>
+            <p>亡灵发表遗言</p>
+            <p>玩家依次发言</p>
+            <p>投票</p>
+            <div class="tran" id="tran1">
+            </div>
+            <div class="tran" id="tran2">
+            </div>
+            <div class="tran" id="tran3">
+            </div>
+            <div class="tran" id="tran4">
+            </div>
+            <div class="tran" id="tran5">
+            </div>
+            <div class="tran" id="tran6">
+            </div>
+            <div class="tran" id="tran7">
+            </div>
+            <div class="line">
+            </div>
+            <div class="daytime"></div>
+            <div class="night"></div>
+        </div>
+    </div>
+</div>

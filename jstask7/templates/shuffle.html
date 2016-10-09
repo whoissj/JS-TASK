@@ -1,0 +1,54 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a ui-sref="homepage"><img class="return" src="../images/shuffle-01.png"/></a>
+                <p class="title">参数设置</p>
+                <a href="#"><div class="help"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="shuffle-main">
+        <div class="container">
+            <div class="player-set">
+                <div class="left-title">
+                    <p>玩<br>家<br>配<br>比</p>
+                </div>
+                <div class="players">
+                    <div class="players-id" id="players-id">
+                        <ul ng-repeat="player in players track by $index">
+                            <li>{{$index + 1}}号玩家身份{{player}}</li>
+                        </ul>
+                    </div>
+                    <div class="set">
+                        <p class="clickset" ng-click="set()">点击设置</p>
+                    </div>
+                </div>
+            </div>
+            <div class="explain">
+                <input class="human" type="text" placeholder="水民词组"/>
+                <input class="ghost" type="text" placeholder="幽灵词组"/>
+            </div>
+            <div class="players-num">
+                <div class="num">
+                    <span>玩家人数</span>
+                    <form name="form" novalidate="novalidate">
+                    <input type="text" name="playersNum" ng-model="playersNum" min="6" max="20" maxmin="true"/>
+                    <span>人</span>
+                    <span  style="color: red;font-size: 12px;" ng-show="form.playersNum.$error.maxmin">请输入6-20玩家人数</span>
+                    </form>
+                </div>
+                <div class="minus" ng-click="playersNum = playersNum - 1">
+                    <i></i>
+                </div>
+                <label for="range"></label>
+                <input class="slider" id="range" type="range" min="6" max="20" ng-model="playersNum"/>
+                <div class="plus" ng-click="playersNum = playersNum*1 + 1">
+                    <i class="i1"></i>
+                    <i class="i2"></i>
+                </div>
+            </div>
+            <input class="deal" type="button" value="去发牌" ng-click="deal()"/>
+        </div>
+    </div>
+</div>

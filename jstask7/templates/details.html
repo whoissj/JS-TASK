@@ -1,0 +1,23 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a ui-sref="check"><img class="return" src="../images/check-01.png"/></a>
+                <p class="title">法官台本</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="details-main" id="main">
+        <ul>
+            <li ng-repeat="player in players track by $index">
+                <img src="../images/pictures.png"/>
+                <p>{{player}}</p>
+                <p>{{$index + 1}}号</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <input type="button" id="start" value="开始游戏" ng-click="gamestart()"/>
+    </div>
+</div>

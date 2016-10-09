@@ -1,0 +1,91 @@
+.main-top{
+    position: fixed;
+    margin-top: 61px;
+    width: 640px;
+    background-color: #29bde0;
+    z-index: 9999;
+}
+.info{
+    height: 82px;
+    background-color: #b9e9f5;
+}
+.eyesopen{
+    float: left;
+    margin:5px 0 0 50px;
+    font-size: 26px;
+    width: 515px;
+}
+.audio{
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    background: #fbb435 url("../images/kill-02.png") no-repeat 16px center;
+    border-radius: 100%;
+}
+.tans{
+    margin:0 0 0 70px;
+    width: 0;
+    height:0;
+    border-top:13px solid #b9e9f5;
+    border-left:13px solid transparent;
+    border-right:13px solid transparent;
+}
+.tips{
+    margin-left: 50px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 90px;
+    border-bottom:1px solid #42c5e4;
+}
+.kill-main{
+    width:100%;
+    margin-top: 185px;
+    padding-top: 15px;
+    padding-bottom: 300px;
+}
+.kill-main ul{
+    list-style: none;
+    font-size: 0;
+}
+.kill-main li{
+    position: relative;
+    margin-top: 65px;
+    margin-left: 40px;
+    margin-right: 35px;
+    list-style: none;
+    width: 126px;
+    height: 126px;
+    display: inline-block;
+    border: 5px solid #fff;
+}
+.kill-main li img{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.kill-main li:hover{
+    cursor: pointer;
+}
+.kill-main li p:nth-of-type(1){
+    width: 126px;
+    height: 99px;
+    line-height:99px;
+    font-size: 30px;
+    background-color: #f5c97b;
+    text-align: center;
+}
+.kill-main li p:nth-of-type(2){
+    width: 126px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 22px;
+    background-color: #83b09a;
+    color: #fff;
+    text-align: center;
+}
+.selected{
+    opacity: 0.5;
+}

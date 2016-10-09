@@ -1,0 +1,25 @@
+<div class="wrap">
+    <div class="check-header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a ui-sref="shuffle"><img class="return" src="../images/check-01.png"/></a>
+                <p class="title">查看身份</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="check-main">
+        <div class="check-content">
+            <div class="check-number">
+                <p class="check-data" id="num">{{playerNum}}</p>
+            </div>
+            <img class="{{picMargin}}" id="pic" ng-src="{{imgSrc}}"/>
+            <p class="check-id" id="job" ng-if="show">{{job}}</p>
+            <p class="check-keyword" id="keyword" ng-if="show">{{keyword}}</p>
+            <p class="check-tips" id="tips" ng-if="show">{{tips}}</p>
+        </div>
+        <p class="check-check" id="checkid" ng-click="check()">
+            {{checkPass}}
+        </p>
+    </div>
+</div>

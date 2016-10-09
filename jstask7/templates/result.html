@@ -1,0 +1,31 @@
+<div class="wrap">
+    <div class="header">
+        <a ui-sref="homepage">
+            <img class="home" src="../images/result-01.png"/>
+        </a>
+        <span class="title">游戏结果</span>
+        <div class="info"></div>
+    </div>
+    <div class="result">
+        <div class="result-pic">
+            <img src="../images/result-04.png">
+            <p>{{victor}}</p>
+        </div>
+        <p class="result-cgtl">太棒了！你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</p>
+        <p class="result-time" id="time">本次游戏共用时0小时25分钟</p>
+        <p class="result-players" id="players">{{killers}}&nbsp;&nbsp;{{people}}</p>
+    </div>
+    <div class="result-details" id="details">
+        <div ng-repeat="deadstatu in deadStatus">
+            <p>第{{deadstatu.dayNum}}天</p>
+            <p>白天：{{deadstatu.killedNum}}号玩家被杀手杀死真实身份是{{deadstatu.killed}}</p>
+            <p>晚上：{{deadstatu.votedNum}}号玩家被投票投死真实身份是{{deadstatu.voted}}</p>
+        </div>
+    </div>
+    <div class="result-footer">
+        <a  ui-sref="shuffle">
+            <input class="left" type="button" value="再来一局" />
+        </a>
+        <input class="right" type="button" value="上传并分享"/>
+    </div>
+</div>

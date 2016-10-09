@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JSTask7</title>
+    <script type="text/javascript">
+    if (location.href.toString().indexOf('file://localhost/') == 0) {
+    location.href = location.href.toString().replace('file://localhost/', 'file:///');
+    }
+    </script>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width: 640px;
+            margin: 0 auto;
+            font-family: "Microsoft YaHei";
+        }
+        ul{
+            list-style: none;
+            font-size: 0;
+        }
+        li{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <div class="box">
+        <div ui-view=""></div>
+    </div>
+    <script src="framework/angular.js"></script>
+    <script src="app.js"></script> <!--启动点js-->
+    <script src="framework/angular-ui-router/angular-ui-router.js"></script>
+    <script src="framework/oclazyLoad/ocLazyLoad.js"></script>
+</body>
+</html>

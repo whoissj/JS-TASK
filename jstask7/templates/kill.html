@@ -1,0 +1,31 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#"><img class="return" src="../images/kill-01.png"/></a>
+                <p class="title">杀手杀人</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main-top">
+        <div class="info">
+            <p class="eyesopen">杀手请睁眼,（杀手告诉法官是否开枪）杀手请选择要杀的对象</p>
+            <div class="audio"></div>
+        </div>
+        <div class="tans">
+        </div>
+        <p class="tips">点击下方玩家头像，对被狙击的玩家进行标记</p>
+    </div>
+    <div class="kill-main" id="main">
+        <ul>
+            <li ng-repeat="player in players track by $index" ng-class='{selected:isSelect==$index}' ng-click='kill($index)'>
+                <p>{{player}}</p>
+                <p>{{$index + 1}}号</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <input type="button" id="start" value="确定" ng-click="decide(row)"/>
+    </div>
+</div>

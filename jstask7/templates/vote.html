@@ -1,0 +1,31 @@
+<div class="wrap">
+    <div class="header-out">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#"><img class="return" src="../images/kill-01.png"/></a>
+                <p class="title">投票</p>
+                <a ui-sref="homepage"><img class="close" src="../images/check-02.png"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="vote-main-top">
+        <div class="vote-info">
+            <p class="vote-explain">发言讨论结束，请大家投票</p>
+            <div class="vote-audio"></div>
+        </div>
+        <div class="vote-tans">
+        </div>
+        <p class="vote-tips">点击得票数最多人的头像</p>
+    </div>
+    <div class="vote-main" id="main">
+        <ul>
+            <li ng-repeat="player in players track by $index" ng-class='{selected:isSelect==$index}' ng-click='vote($index)'>
+                <p>{{player}}</p>
+                <p>{{$index + 1}}号</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <input type="button" id="start" value="投死" ng-click="votedead()"/>
+    </div>
+</div>
