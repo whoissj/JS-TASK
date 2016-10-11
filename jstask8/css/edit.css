@@ -61,10 +61,10 @@ input[type=button] {
     margin-top: 180px;
     text-align: center;
 }
-#container{
+#editor{
     width: 820px;
-    height: 120px;
     margin-left: 120px;
+    height:120px;
 }
 .invalid {
     border: 1px solid #ff0000;

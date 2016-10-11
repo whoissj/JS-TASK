@@ -18,6 +18,22 @@ var app = angular.module("myApp",[]);
     }]);
     //添加学员控制器
     app.controller("Enrolling", ["$scope","$state","$http","operateStnInfo", function ($scope,$state,$http,operateStnInfo) {
+        $scope.simple = {
+            toolbars: [
+                [
+                    '|', 'undo', 'redo', '|',
+                    'bold', 'italic', 'underline', 'fontborder', 'removeformat', 'formatmatch', '|', 'forecolor', 'backcolor','|',
+                    'fontfamily', 'fontsize', '|',
+                    'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                    'link', 'unlink', '|',
+                    'simpleupload', 'insertimage', 'emotion',  '|'
+                ]
+            ],
+            wordCount:false,
+            autoHeightEnabled: false,
+            autoFloatEnabled: false,
+            elementPathEnabled:false
+        };
         $scope.save = function(){
             var newStn = $scope.newStu;
             console.log(newStn);
@@ -39,6 +55,22 @@ var app = angular.module("myApp",[]);
     }]);
     //修改学员控制器
     app.controller("Edit", ["$scope","$state","$http","operateStnInfo", function ($scope,$state,$http,operateStnInfo) {
+        $scope.simple = {
+            toolbars: [
+                [
+                    '|', 'undo', 'redo', '|',
+                    'bold', 'italic', 'underline', 'fontborder', 'removeformat', 'formatmatch', '|', 'forecolor', 'backcolor','|',
+                    'fontfamily', 'fontsize', '|',
+                    'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                    'link', 'unlink', '|',
+                    'simpleupload', 'insertimage', 'emotion',  '|'
+                ]
+            ],
+            wordCount:false,
+            autoHeightEnabled: false,
+            autoFloatEnabled: false,
+            elementPathEnabled:false
+        };
         $scope.save = function () {
             var student = $scope.student;
             operateStnInfo.editStn(student).then(function (respInfo) {

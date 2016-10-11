@@ -2,7 +2,7 @@
  * Created by �� on 2016/9/27.
  */
 
-var myApp = angular.module('myApp', ['ui.router', 'oc.lazyLoad']);
+var myApp = angular.module('myApp', ['ui.router', 'oc.lazyLoad','ng.ueditor']);
 myApp.config(function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     var _lazyLoad = function(loaded) {
         return function($ocLazyLoad) {

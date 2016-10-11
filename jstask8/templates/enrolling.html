@@ -67,33 +67,7 @@
         </div>
         <div class="oath">
             <span>修行立愿：</span>
-            <textarea id="wish" name="wish" ng-model="newStu.wish"
-                      ng-class="{'invalid':saveForm.wish.$invalid && saveForm.wish.$touched,'valid':saveForm.wish.$valid }"
-                      required>
-            </textarea>
-            <!--<script id="container" name="content" type="text/plain"></script>-->
-            <!--&lt;!&ndash; 配置文件 &ndash;&gt;-->
-            <!--<script type="text/javascript" src="../framework/ueditor/ueditor.config.js"></script>-->
-            <!--&lt;!&ndash; 编辑器源码文件 &ndash;&gt;-->
-            <!--<script type="text/javascript" src="../framework/ueditor/ueditor.all.js"></script>-->
-            <!--&lt;!&ndash; 实例化编辑器 &ndash;&gt;-->
-            <!--<script type="text/javascript">-->
-                <!--var ue = UE.getEditor('container',{-->
-                    <!--toolbars: [-->
-                        <!--[-->
-                            <!--'|', 'undo', 'redo', '|',-->
-                            <!--'bold', 'italic', 'underline', 'fontborder', 'removeformat', 'formatmatch', '|', 'forecolor', 'backcolor','|',-->
-                            <!--'fontfamily', 'fontsize', '|',-->
-                            <!--'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',-->
-                            <!--'link', 'unlink', '|',-->
-                            <!--'simpleupload', 'insertimage', 'emotion',  '|'-->
-                        <!--]-->
-                    <!--],-->
-                    <!--autoHeightEnabled: false,-->
-                    <!--autoFloatEnabled: false,-->
-                    <!--elementPathEnabled:false-->
-                <!--});-->
-            <!--</script>-->
+            <div id="editor" class="ueditor" name="content" config="simple" ng-model="newStu.wish"></div>
         </div>
         <div class="footer">
             <input type="button" class="save btn btn-primary" id="save" value="保存" ng-disabled="saveForm.$invalid" ng-click="save()">
