@@ -1,0 +1,42 @@
+<div class="box" id="box">
+    <div class="return">
+        <a id="return" ui-sref="list">返回>></a>
+    </div>
+    <div class="name" id="name">
+        <span>姓名：</span>
+        <p class="info">{{student.name}}</p>
+    </div>
+    <div class="qq" id="qq">
+        <span>QQ：</span>
+        <p class="info">{{student.qq}}</p>
+    </div>
+    <div class="job" id="job">
+        <span>修真类型：</span>
+        <p class="info">{{student.type | typeFilter}}</p>
+    </div>
+    <div class="school" id="school">
+        <span>毕业院校：</span>
+        <p class="info">{{student.school}}</p>
+    </div>
+    <div class="gift" id="gift">
+        <span>资质：</span>
+        <p class="info">{{student.talent | talentFilter}}</p>
+    </div>
+    <div class="level" id="level">
+        <span>修行等级：</span>
+        <p class="info">{{student.level | levelFilter}}</p>
+    </div>
+    <div class="jointime" id="jointime">
+        <span>预计入学时间：</span>
+        <p class="info">{{student.joinTime}}</p>
+    </div>
+    <div class="oath" id="oath">
+        <span>修行立愿：</span>
+        <p class="info">{{student.wish}}</p>
+    </div>
+    <div class="footer">
+        <input type="button" class="save btn btn-primary" id="edit" value="编辑" ui-sref="edit">
+        <input type="button" class="cancel btn btn-primary" id="delete" value="删除" ng-click="delete()">
+    </div>
+
+</div>

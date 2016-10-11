@@ -1,0 +1,17 @@
+<div class="list-box" id="box">
+    <p class="title">已报名弟子：</p>
+    <div class="list-addinfo">
+        <a id="add" ui-sref="enrolling">+</a>
+    </div>
+    <div class="top">
+        <p>姓名</p>
+        <p>修真类型</p>
+        <p>报名时间</p>
+    </div>
+    <ul ng-repeat="student in students track by $index" ng-click='choose($index)'>
+        <li>{{student.name}}</li>
+        <li>{{student.type | typeFilter}}</li>
+        <!--<li>{{type[student.type - 1]}}</li>-->
+        <li>{{student.joinTime}}</li>
+    </ul>
+</div>

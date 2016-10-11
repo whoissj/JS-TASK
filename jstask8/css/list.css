@@ -1,0 +1,58 @@
+.list-box {
+    position: relative;
+    padding:0 20px;
+    width: 1000px;
+    height: 600px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Arial Normal', 'Arial';
+    overflow-y: scroll;
+}
+.title{
+    margin: 0;
+    line-height: 68px;
+}
+.list-addinfo{
+    position: absolute;
+    top:0;
+    right: 40px;
+}
+.list-addinfo a{
+    font-size: 48px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-size: 0;
+}
+li{
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 40px;
+}
+ul li:first-child:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.top{
+    font-size: 0;
+}
+.top p{
+    display: inline-block;
+    margin:0;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 40px;
+    background-color: lightgray;
+}

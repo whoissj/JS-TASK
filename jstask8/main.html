@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>学员报名系统</title>
+    <script type="text/javascript">
+        if (location.href.toString().indexOf('file://localhost/') == 0) {
+            location.href = location.href.toString().replace('file://localhost/', 'file:///');
+        }
+    </script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="framework/font-awesome/css/font-awesome.css">
+    <style type="text/css">
+        body {
+            font-family: "Microsoft YaHei";
+            overflow-x: hidden;
+        }
+        .left-side{
+            border:1px solid #ccc;
+        }
+        .left-side {
+            padding-right: 0;
+        }
+        .left-side p {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .left-side p:hover {
+            cursor: pointer;
+            background-color: #ddd;
+        }
+        .left-side p a{
+            text-decoration: none;
+        }
+        label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="container-fluid row">
+    <div class="left-side row col-lg-2">
+        <button class="col-lg-12 col-md-4 col-sm-4 col-xs-4 btn btn-primary" ui-sref="list">列表</button>
+        <button class="col-lg-12 col-md-4 col-sm-4 col-xs-4 btn btn-primary" ui-sref="enrolling">报名</button>
+        <button class="col-lg-12 col-md-4 col-sm-4 col-xs-4 btn btn-primary" ui-sref="detail">详情</button>
+    </div>
+    <!--<div class="left-side row col-lg-2" ng-repeat="tab in tabs">-->
+    <!--<p>{{tab.list}}</p>-->
+    <!--<p>{{tab.enrolling}}</p>-->
+    <!--<p>{{tab.edit}}</p>-->
+    <!--</div>-->
+    <div class="right-side col-lg-10">
+        <div ui-view="">
+
+        </div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>
+<script src="framework/oclazyLoad/ocLazyLoad.js"></script>
+<script src="app.js"></script> <!--启动点js-->
+<script src="js/factorys.js"></script>
+<script src="js/filter.js"></script>
+<script src="framework/angular-ui-router/angular-ui-router.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="framework/bootbox.js"></script>
+</body>
+</html>

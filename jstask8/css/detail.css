@@ -1,0 +1,56 @@
+.box {
+    position: relative;
+    padding:0 20px;
+    width: 1000px;
+    height: 600px;
+    border: 1px solid gray;
+    font-size: 16px;
+    font-family: 'Arial Normal', 'Arial';
+}
+.name,.job,.school,.level,.gift,.oath,.qq,.jointime,.footer {
+    position: relative;
+    margin-bottom: 15px;
+    height: 25px;
+}
+.return{
+    position: absolute;
+    top:10px;
+    left: 850px;
+    z-index: 9999;
+}
+span {
+    position: absolute;
+    line-height: 25px;
+}
+.info {
+    position: absolute;
+    left: 120px;
+    line-height: 25px;
+}
+.name {
+    margin-top: 40px;
+}
+span {
+    position: absolute;
+    line-height: 25px;
+}
+.oath .first{
+    position: absolute;
+    left: 120px;
+    width: 820px;
+    height: 100px;
+    overflow-y: scroll;
+}
+input[type=button] {
+    margin-right: 90px;
+    margin-left: 90px;
+    width: 100px;
+    height:40px;
+    border-radius: 5px;
+    border:1px solid gray;
+    font-size: 16px;
+}
+.footer{
+    margin-top: 180px;
+    text-align: center;
+}
