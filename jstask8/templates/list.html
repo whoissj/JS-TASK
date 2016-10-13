@@ -1,17 +1,25 @@
-<div class="list-box" id="box">
-    <p class="title">已报名弟子：</p>
+<div class="list-box">
+    <p class="list-title">已报名弟子：</p>
     <div class="list-addinfo">
-        <a id="add" ui-sref="enrolling">+</a>
+        <a ui-sref = "enrolling">+</a>
     </div>
-    <div class="top">
-        <p>姓名</p>
-        <p>修真类型</p>
-        <p>报名时间</p>
-    </div>
-    <ul ng-repeat="student in students track by $index" ng-click='choose($index)'>
-        <li>{{student.name}}</li>
-        <li>{{student.type | typeFilter}}</li>
-        <!--<li>{{type[student.type - 1]}}</li>-->
-        <li>{{student.joinTime}}</li>
-    </ul>
+    <table class="list-top table table-striped table-bordered table-hover">
+        <thead>
+            <tr class="info">
+                <th><input type="checkbox" ng-model="master" class="allchoosed"></th>
+                <th>姓名</th>
+                <th>修真类型</th>
+                <th>报名时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="student in students track by $index" ng-click='choose($index)'>
+                <th><input type="checkbox" name="stninfo" ng-checked="master" class="allchoosed" ng-model="student.id"></th>
+                <th>{{student.name}}</th>
+                <th>{{student.type | typeFilter}}</th>
+                <th>{{student.joinTime | date:'yyyy-MM-dd'}}</th>
+            </tr>
+        </tbody>
+    </table>
+
 </div>

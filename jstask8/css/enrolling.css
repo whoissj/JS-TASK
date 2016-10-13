@@ -11,7 +11,7 @@
     margin-bottom: 15px;
     height: 25px;
 }
-input[type=text] {
+.form-control{
     position: absolute;
     left: 120px;
     width: 820px;
@@ -35,7 +35,7 @@ input[type=text] {
 .study{
     margin-right: 40px;
 }
-span {
+.title {
     position: absolute;
     line-height: 25px;
 }

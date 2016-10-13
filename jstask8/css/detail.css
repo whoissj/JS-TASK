@@ -1,4 +1,4 @@
-.box {
+.detail-box {
     position: relative;
     padding:0 20px;
     width: 1000px;
@@ -12,34 +12,23 @@
     margin-bottom: 15px;
     height: 25px;
 }
-.return{
+.detail-return{
     position: absolute;
     top:10px;
     left: 850px;
     z-index: 9999;
 }
-span {
+.detail-title {
     position: absolute;
     line-height: 25px;
 }
-.info {
+.detail-info {
     position: absolute;
     left: 120px;
     line-height: 25px;
 }
-.name {
+.detail-name {
     margin-top: 40px;
-}
-span {
-    position: absolute;
-    line-height: 25px;
-}
-.oath .first{
-    position: absolute;
-    left: 120px;
-    width: 820px;
-    height: 100px;
-    overflow-y: scroll;
 }
 input[type=button] {
     margin-right: 90px;
@@ -53,4 +42,7 @@ input[type=button] {
 .footer{
     margin-top: 180px;
     text-align: center;
+}
+.name {
+    margin-top: 40px;
 }

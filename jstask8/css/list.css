@@ -8,7 +8,7 @@
     font-family: 'Arial Normal', 'Arial';
     overflow-y: scroll;
 }
-.title{
+.list-title{
     margin: 0;
     line-height: 68px;
 }
@@ -23,36 +23,6 @@
     color: black;
     cursor: pointer;
 }
-ul{
-    margin:0;
-    padding:0;
-    list-style: none;
-    font-size: 0;
-}
-li{
-    display: inline-block;
-    width: 300px;
-    height: 40px;
-    font-size: 16px;
-    border: 1px solid gray;
+.list-top th{
     text-align: center;
-    line-height: 40px;
-}
-ul li:first-child:hover {
-    cursor: pointer;
-    background-color: lightgray;
-}
-.top{
-    font-size: 0;
-}
-.top p{
-    display: inline-block;
-    margin:0;
-    width: 300px;
-    height: 40px;
-    font-size: 16px;
-    border: 1px solid gray;
-    text-align: center;
-    line-height: 40px;
-    background-color: lightgray;
 }

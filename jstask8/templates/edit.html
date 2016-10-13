@@ -1,7 +1,7 @@
 <div class="box">
     <form name="saveForm">
         <div class="name">
-            <span>姓名：</span>
+            <span class="title">姓名：</span>
             <input id="name" name="name" type="text" ng-model="student.name"
                    ng-class="{'invalid':saveForm.name.$invalid && saveForm.name.$touched,'valid':saveForm.name.$valid }"
                    required>
@@ -9,7 +9,7 @@
             <p ng-if="saveForm.name.$valid" class="fa fa-check validcolor"></p>
         </div>
         <div class="qq">
-            <span>QQ：</span>
+            <span class="title">QQ：</span>
             <input id="qq" name="qq" type="text" ng-model="student.qq"
                    ng-class="{'invalid':saveForm.qq.$invalid && saveForm.qq.$touched,'valid':saveForm.qq.$valid}"
                    ng-maxlength="15"
@@ -19,7 +19,7 @@
             <p ng-if="saveForm.qq.$valid" class="fa fa-check validcolor"></p>
         </div>
         <div class="job">
-            <span>修真类型：</span>
+            <span class="title">修真类型：</span>
             <div class="typeinput">
                 <input type="radio" id="kind-css" name="job" value="1" ng-model="student.type"><label class="kind" for="kind-css">CSS</label>
                 <input type="radio" id="kind-js" name="job" value="2" ng-model="student.type"><label class="kind" for="kind-js">JS</label>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="school">
-            <span>毕业院校：</span>
+            <span class="title">毕业院校：</span>
             <input id="school" name="school" type="text" ng-model="student.school"
                    ng-class="{'invalid':saveForm.school.$invalid && saveForm.school.$touched,'valid':saveForm.school.$valid }"
                    required>
@@ -40,14 +40,14 @@
             <p ng-if="saveForm.school.$valid" class="fa fa-check validcolor"></p>
         </div>
         <div class="gift">
-            <span>资质：</span>
+            <span class="title">资质：</span>
             <div class="giftinput">
                 <input type="radio" id="gift-good" name="gift" value="1" ng-model="student.talent"><label class="kind" for="gift-good">学霸</label>
                 <input type="radio" id="gift-bad" name="gift" value="2" ng-model="student.talent"><label class="kind" for="gift-bad">学渣</label>
             </div>
         </div>
         <div class="level">
-            <span>修行等级：</span>
+            <span class="title">修行等级：</span>
             <div class="levelinput">
                 <input type="radio" id="level0" name="level" value="1" ng-model="student.level"><label class="study" for="level0">0基础</label>
                 <input type="radio" id="level1" name="level" value="2" ng-model="student.level"><label class="study" for="level1">修行3个月以内</label>
@@ -58,15 +58,13 @@
             </div>
         </div>
         <div class="join-time">
-            <span>预计入学时间：</span>
-            <input id="jointime" name="jointime" type="text" ng-model="student.joinTime"
-                   ng-class="{'invalid':saveForm.jointime.$invalid && saveForm.jointime.$touched,'valid':saveForm.jointime.$valid }"
-                   required>
-            <p ng-if="saveForm.jointime.$invalid && saveForm.jointime.$touched " class="fa fa-times invalidcolor"></p>
-            <p ng-if="saveForm.jointime.$valid" class="fa fa-check validcolor"></p>
+            <span class="title">预计入学时间：</span>
+            <input id="jointime" class="form-control" name="jointime" type="text"
+                   bs-datepicker data-date-format="yyyy-MM-dd" data-date-type="number"
+                   ng-model="student.joinTime" />
         </div>
         <div class="oath">
-            <span>修行立愿：</span>
+            <span class="title">修行立愿：</span>
             <div id="editor" class="ueditor" name="content" config="simple" ng-model="student.wish"></div>
         </div>
         <div class="footer">

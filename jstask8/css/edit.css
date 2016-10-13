@@ -35,7 +35,7 @@ input[type=text] {
 .study{
     margin-right: 40px;
 }
-span {
+.title {
     position: absolute;
     line-height: 25px;
 }

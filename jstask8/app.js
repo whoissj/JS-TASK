@@ -2,7 +2,7 @@
  * Created by �� on 2016/9/27.
  */
 
-var myApp = angular.module('myApp', ['ui.router', 'oc.lazyLoad','ng.ueditor']);
+var myApp = angular.module('myApp', ['ui.router', 'oc.lazyLoad','ng.ueditor','mgcrea.ngStrap']);
 myApp.config(function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     var _lazyLoad = function(loaded) {
         return function($ocLazyLoad) {
@@ -32,7 +32,7 @@ myApp.config(function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
             }
         })
         .state('detail',{
-            url:'/detail',
+            url:'/detail/:id',
             templateUrl:'templates/detail.html',
             controller:'Detail',
             resolve: {
@@ -42,7 +42,7 @@ myApp.config(function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
             }
         })
         .state('edit',{
-            url:'/edit',
+            url:'/edit/:id',
             templateUrl:'templates/edit.html',
             controller:'Edit',
             resolve: {
@@ -52,10 +52,3 @@ myApp.config(function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
             }
         })
 });
-//.controller('Tab',function($scope,$state,$http){
-//    $scope.tabs = {
-//        list:"列表",
-//        enrolling:"报名",
-//        edit:"详情"
-//    }
-//});
